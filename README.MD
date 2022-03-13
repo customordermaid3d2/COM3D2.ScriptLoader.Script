@@ -13,11 +13,18 @@ Put *.cs file of this project in COM3D2\scripts
 프라이빗 모드에 모든 메이드 표시  
 PrivateMaidList와 같으니 둘중 하나만 쓰기
 
+# CharacterEditSortRedux - CMI 
+
+메이드 정렬  
+물리적 정렬이 아닌 표시를 정렬함  
+CharacterSelectManagerSort와 중복되니 둘중 하나만 쓸것  
+
 
 # CharacterSelectManagerSort - Lilly   
 
 메이드 정렬  
 물리적 정렬이 아닌 표시를 정렬함  
+CharacterEditSortRedux와 중복되니 둘중 하나만 쓸것  
 
 
 # dump_game_info - CMI
