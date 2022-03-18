@@ -48,6 +48,9 @@
     <Reference Include="BepInEx, Version=5.4.19.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BepInEx.BaseLib.5.4.19\lib\net35\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="COM3D2.DanceCameraMotion.Plugin">
+      <HintPath>H:\COM3D2\Sybaris\UnityInjector\COM3D2.DanceCameraMotion.Plugin.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
       <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.dll</HintPath>
     </Reference>
@@ -79,6 +82,7 @@
   <ItemGroup>
     <Compile Include="add_subs_to_old_yotogi.cs" />
     <Compile Include="all_maids_in_private_mode.cs" />
+    <Compile Include="CharacterEditSortRedux.cs" />
     <Compile Include="CharacterSelectManagerSort.cs" />
     <Compile Include="dump_game_info.cs" />
     <Compile Include="editable_names.cs" />
@@ -94,11 +98,15 @@
     <Compile Include="PrivateMaidList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="report_dupes.cs" />
+    <Compile Include="ResetMuneYurePatch.cs" />
+    <Compile Include="SaveLoadFailToTitle.cs" />
     <Compile Include="saveSettingsInGame.cs" />
+    <Compile Include="SimpleExperienceSystemSetMax.cs" />
     <Compile Include="skipStartLogo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="scriptignores" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.8\analyzers\dotnet\cs\BepInEx.Analyzers.CodeFixes.dll" />
@@ -116,6 +124,10 @@
     <PostBuildEvent>copy "$(ProjectDir)*.cs" "h:\COM3D2_5\scripts\" 
 copy "$(ProjectDir)*.cs" "h:\COM3D2_5-test\scripts\"
 copy "$(ProjectDir)*.cs" "h:\COM3D2\scripts\" 
-copy "$(ProjectDir)*.cs" "h:\COM3D2-test\scripts\"</PostBuildEvent>
+copy "$(ProjectDir)*.cs" "h:\COM3D2-test\scripts\"
+copy "$(ProjectDir)scriptignores" "h:\COM3D2_5\scripts\" 
+copy "$(ProjectDir)scriptignores" "h:\COM3D2_5-test\scripts\"
+copy "$(ProjectDir)scriptignores" "h:\COM3D2\scripts\" 
+copy "$(ProjectDir)scriptignores" "h:\COM3D2-test\scripts\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
