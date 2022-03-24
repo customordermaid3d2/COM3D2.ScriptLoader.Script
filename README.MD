@@ -4,7 +4,7 @@ need ScriptLoader.dll https://github.com/ghorsington/BepInEx.ScriptLoader
 Put *.cs file of this project in COM3D2\scripts form https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script  
   
 ScriptLoader.dll 필요 https://github.com/ghorsington/BepInEx.ScriptLoader  
-https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script*.cs 에서 파일을 COM3D2\scripts 에 넣기  
+https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script 에서 *.cs 파일을 COM3D2\scripts 에 넣기  
 내가 개발한것 외에 CMI나 디스코드의 파일도 포함됨
 
 
