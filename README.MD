@@ -53,6 +53,11 @@ fastFade플러그인의 스크립트 버전
 기존 플러그인과 다르게 날자 전환은 스킾 안함  
 
 
+# ForceScheduleEvents - discode
+
+스케줄 강제 활성화  
+
+
 # GuestModeFree - Lilly
 
 게스트모드의 플레이 버튼 모두 활성화  
