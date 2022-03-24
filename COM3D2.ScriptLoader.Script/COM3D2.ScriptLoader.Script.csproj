@@ -89,6 +89,7 @@
     <Compile Include="editBlinkStop.cs" />
     <Compile Include="enable_scout_mode.cs" />
     <Compile Include="fastFade.cs" />
+    <Compile Include="ForceScheduleEvents.cs" />
     <Compile Include="GuestModeFree.cs" />
     <Compile Include="MemoriesModeUnlock.cs" />
     <Compile Include="MotionWindowAddMyPose.cs" />

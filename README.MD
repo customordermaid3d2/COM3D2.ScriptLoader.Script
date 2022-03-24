@@ -55,6 +55,7 @@ fastFade플러그인의 스크립트 버전
 
 # ForceScheduleEvents - discode
 
+https://discordapp.com/channels/297072643797155840/736350853442699284/956495568887226398  
 스케줄 강제 활성화  
 
 
