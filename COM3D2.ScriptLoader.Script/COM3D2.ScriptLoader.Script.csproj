@@ -91,6 +91,7 @@
     <Compile Include="fastFade.cs" />
     <Compile Include="ForceScheduleEvents.cs" />
     <Compile Include="GuestModeFree.cs" />
+    <Compile Include="keyChange.cs" />
     <Compile Include="MemoriesModeUnlock.cs" />
     <Compile Include="MotionWindowAddMyPose.cs" />
     <Compile Include="nameExtender.cs" />

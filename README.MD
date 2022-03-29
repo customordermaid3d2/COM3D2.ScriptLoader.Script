@@ -67,6 +67,16 @@ https://discordapp.com/channels/297072643797155840/736350853442699284/9564955688
 게스트모드의 플레이 버튼 모두 활성화  
 
 
+# keyChange
+
+대사 진행창에서 앤터를 눌러야만 진행되는데  
+앤터키를 스페이스로 변경  
+스크립트 수정해서 다른키로 변경 가능  
+codes[Index].operand = (SByte)KeyCode.Space;  
+
+
+
+
 # MemoriesModeUnlock - Lilly
 
 회상모드의 일상,VIP 메뉴 활성화  
