@@ -20,35 +20,48 @@ namespace COM3D2.ScriptLoader.Script
         public static void Unload()
         {
             instance?.UnpatchAll(instance.Id);
+            instance = null;
         }
 
         [HarmonyPatch(typeof(MessageWindowMgr), "Update")]
         [HarmonyTranspiler]
         private static IEnumerable<CodeInstruction> Start(IEnumerable<CodeInstruction> instructions)
         {
-            var Index = -1;
-
-            var codes = new List<CodeInstruction>(instructions);
-            for (var i = 0; i < codes.Count; i++)
+            try
             {
-                if (codes[i].opcode == OpCodes.Ldc_I4_S && (SByte)codes[i].operand == (SByte)KeyCode.Return)// && Enum.Equals(KeyCode.Return, codes[i].operand)
+                CodeMatcher codeMatcher = new CodeMatcher(instructions)
+                    .MatchForward(false
+                    , new CodeMatch(OpCodes.Call, AccessTools.Method(typeof(Input), "GetKeyDown", new Type[] { typeof(KeyCode) }))
+                    );                               
+
+                if (codeMatcher.Pos == codeMatcher.Length)
                 {
-                    //MessageWindowMgr.Update 105 , 13 , System.SByte
-                    Debug.LogWarning($"MessageWindowMgr.Update {i} , {codes[i].operand} , {codes[i].operand.GetType()}");
-                    Index = i;
-                    break;
+                    Debug.LogError($"MessageWindowMgr.Update not Match {codeMatcher.Pos} {codeMatcher.Length}");
+                    return instructions;
                 }
-            }
-            if (Index > -1)
-            {
-                codes[Index].operand = (SByte)KeyCode.Space;
-            }
-            else
-            {
-                Debug.LogError($"MessageWindowMgr.Update fail");
-            }
 
-            return codes.AsEnumerable();
+                Debug.LogWarning($"MessageWindowMgr.Update succ patch");
+
+                return codeMatcher
+                    .SetInstruction(
+                        new CodeInstruction(
+                            OpCodes.Call,
+                            AccessTools.Method(typeof(keyChange), "GetKeyState", new Type[] { typeof(KeyCode) })
+                            )
+                    )
+                    .InstructionEnumeration();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"MessageWindowMgr.Update {e}");
+                return instructions;
+            }
         }
+
+        public static bool GetKeyState(KeyCode keyCode)
+        {
+            return Input.GetKeyDown(keyCode) || Input.GetKeyDown(KeyCode.Space);
+        }
+
     }
 }

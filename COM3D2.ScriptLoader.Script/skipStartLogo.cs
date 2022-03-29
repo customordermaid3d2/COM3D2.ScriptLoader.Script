@@ -12,12 +12,13 @@ public static class SkipStartLogo {
 
     public static void Main() 
 	{
-        instance = Harmony.CreateAndPatchAll(typeof(SkipStartLogo));
+        if (instance == null)
+            instance = Harmony.CreateAndPatchAll(typeof(SkipStartLogo));
     }
 
     public static void Unload() 
 	{
-        instance.UnpatchAll(instance.Id);
+        instance?.UnpatchAll(instance.Id);
         instance = null;
     }
 

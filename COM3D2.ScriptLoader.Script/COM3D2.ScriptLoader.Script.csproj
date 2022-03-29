@@ -92,6 +92,7 @@
     <Compile Include="ForceScheduleEvents.cs" />
     <Compile Include="GuestModeFree.cs" />
     <Compile Include="keyChange.cs" />
+    <Compile Include="load_small_thumbs.cs" />
     <Compile Include="MemoriesModeUnlock.cs" />
     <Compile Include="MotionWindowAddMyPose.cs" />
     <Compile Include="nameExtender.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="saveSettingsInGame.cs" />
     <Compile Include="SimpleExperienceSystemSetMax.cs" />
     <Compile Include="skipStartLogo.cs" />
+    <Compile Include="unlock_all_skills.cs" />
+    <Compile Include="wrap_mode_extend.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

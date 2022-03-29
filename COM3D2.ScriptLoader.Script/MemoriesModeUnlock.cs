@@ -11,12 +11,12 @@ public static class MemoriesModeUnlock {
     static Harmony instance;
 
     public static void Main() {
-        instance = Harmony.CreateAndPatchAll(typeof(MemoriesModeUnlock));
+		if (instance == null)
+			instance = Harmony.CreateAndPatchAll(typeof(MemoriesModeUnlock));
     }
 
     public static void Unload() {
-		if(instance != null)
-			instance.UnpatchAll(instance.Id);
+		instance?.UnpatchAll(instance.Id);
         instance = null;
     }
 

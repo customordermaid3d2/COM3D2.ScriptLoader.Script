@@ -70,9 +70,9 @@ https://discordapp.com/channels/297072643797155840/736350853442699284/9564955688
 # keyChange
 
 대사 진행창에서 앤터를 눌러야만 진행되는데  
-앤터키를 스페이스로 변경  
-스크립트 수정해서 다른키로 변경 가능  
-codes[Index].operand = (SByte)KeyCode.Space;  
+스페이스로도 진행할수 있게됨.  
+스크립트 수정해서 다른키로 변경 및 추가 가능  
+return Input.GetKeyDown(keyCode) || Input.GetKeyDown(KeyCode.Space);
 
 
 
