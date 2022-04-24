@@ -3,9 +3,9 @@
 need ScriptLoader.dll https://github.com/ghorsington/BepInEx.ScriptLoader  
 Put *.cs file of this project in COM3D2\scripts form https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script  
   
-ScriptLoader.dll ÇÊ¿ä https://github.com/ghorsington/BepInEx.ScriptLoader  
-https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script ¿¡¼­ *.cs ÆÄÀÏÀ» COM3D2\scripts ¿¡ ³Ö±â  
-³»°¡ °³¹ßÇÑ°Í ¿Ü¿¡ CMI³ª µğ½ºÄÚµåÀÇ ÆÄÀÏµµ Æ÷ÇÔµÊ
+ScriptLoader.dll í•„ìš” https://github.com/ghorsington/BepInEx.ScriptLoader  
+https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script ì—ì„œ *.cs íŒŒì¼ì„ COM3D2\scripts ì— ë„£ê¸°  
+ë‚´ê°€ ê°œë°œí•œê²ƒ ì™¸ì— CMIë‚˜ ë””ìŠ¤ì½”ë“œì˜ íŒŒì¼ë„ í¬í•¨ë¨
 
 
 # add_subs_to_old_yotogi - CMI  
@@ -13,33 +13,33 @@ https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM
 
 # all_maids_in_private_mode - CMI 
 
-ÇÁ¶óÀÌºø ¸ğµå¿¡ ¸ğµç ¸ŞÀÌµå Ç¥½Ã  
-PrivateMaidList¿Í °°À¸´Ï µÑÁß ÇÏ³ª¸¸ ¾²±â
+í”„ë¼ì´ë¹— ëª¨ë“œì— ëª¨ë“  ë©”ì´ë“œ í‘œì‹œ  
+PrivateMaidListì™€ ê°™ìœ¼ë‹ˆ ë‘˜ì¤‘ í•˜ë‚˜ë§Œ ì“°ê¸°
 
 # CharacterEditSortRedux - CMI 
 
-¸ŞÀÌµå Á¤·Ä  
-¹°¸®Àû Á¤·ÄÀÌ ¾Æ´Ñ Ç¥½Ã¸¦ Á¤·ÄÇÔ  
-CharacterSelectManagerSort¿Í Áßº¹µÇ´Ï µÑÁß ÇÏ³ª¸¸ ¾µ°Í  
+ë©”ì´ë“œ ì •ë ¬  
+ë¬¼ë¦¬ì  ì •ë ¬ì´ ì•„ë‹Œ í‘œì‹œë¥¼ ì •ë ¬í•¨  
+CharacterSelectManagerSortì™€ ì¤‘ë³µë˜ë‹ˆ ë‘˜ì¤‘ í•˜ë‚˜ë§Œ ì“¸ê²ƒ  
 
 
 # CharacterSelectManagerSort - Lilly   
 
-¸ŞÀÌµå Á¤·Ä  
-¹°¸®Àû Á¤·ÄÀÌ ¾Æ´Ñ Ç¥½Ã¸¦ Á¤·ÄÇÔ  
-CharacterEditSortRedux¿Í Áßº¹µÇ´Ï µÑÁß ÇÏ³ª¸¸ ¾µ°Í  
+ë©”ì´ë“œ ì •ë ¬  
+ë¬¼ë¦¬ì  ì •ë ¬ì´ ì•„ë‹Œ í‘œì‹œë¥¼ ì •ë ¬í•¨  
+CharacterEditSortReduxì™€ ì¤‘ë³µë˜ë‹ˆ ë‘˜ì¤‘ í•˜ë‚˜ë§Œ ì“¸ê²ƒ  
 
 
 # dump_game_info - CMI
 
-°ÔÀÓÁ¤º¸ Ãâ·Â¿ë  
-µğ½ºÄÚµå¿¡ ºĞ¼® ÀÇ·Ú½Ã ÀÌ½ºÅ©¸³Æ®¸¦ Æ÷ÇÔÇØ¼­ ½ÇÇà ÈÄ 
-COM3D2\BepinEx\LogOutput.log  ÆÄÀÏÀ» °øÀ¯ÇÒ°Í  
+ê²Œì„ì •ë³´ ì¶œë ¥ìš©  
+ë””ìŠ¤ì½”ë“œì— ë¶„ì„ ì˜ë¢°ì‹œ ì´ìŠ¤í¬ë¦½íŠ¸ë¥¼ í¬í•¨í•´ì„œ ì‹¤í–‰ í›„ 
+COM3D2\BepinEx\LogOutput.log  íŒŒì¼ì„ ê³µìœ í• ê²ƒ  
 
 
 # editable_names - CMI 
 
-¸ŞÀÌµå ÆíÁı½Ã ÀÌ¸§ ¼öÁ¤ °¡´É  
+ë©”ì´ë“œ í¸ì§‘ì‹œ ì´ë¦„ ìˆ˜ì • ê°€ëŠ¥  
 
 
 # editBlinkStop - CMI
@@ -47,43 +47,45 @@ COM3D2\BepinEx\LogOutput.log  ÆÄÀÏÀ» °øÀ¯ÇÒ°Í
 
 # enable_scout_mode - CMI
 
-½ºÄ«¿ô ¸Ş´º Ç×»ó È°¼ºÈ­  
+ìŠ¤ì¹´ì›ƒ ë©”ë‰´ í•­ìƒ í™œì„±í™”  
 
 
 # fastFade - CMI  
 
-fastFadeÇÃ·¯±×ÀÎÀÇ ½ºÅ©¸³Æ® ¹öÀü  
-±âÁ¸ ÇÃ·¯±×ÀÎ°ú ´Ù¸£°Ô ³¯ÀÚ ÀüÈ¯Àº ½ºµh ¾ÈÇÔ  
+fastFadeí”ŒëŸ¬ê·¸ì¸ì˜ ìŠ¤í¬ë¦½íŠ¸ ë²„ì „  
+ê¸°ì¡´ í”ŒëŸ¬ê·¸ì¸ê³¼ ë‹¤ë¥´ê²Œ ë‚ ì ì „í™˜ì€ ìŠ¤h ì•ˆí•¨  
 
 
 # ForceScheduleEvents - discode
 
 https://discordapp.com/channels/297072643797155840/736350853442699284/956495568887226398  
-½ºÄÉÁÙ °­Á¦ È°¼ºÈ­  
+ìŠ¤ì¼€ì¤„ ê°•ì œ í™œì„±í™”  
+static readonly KeyCode TOGGLE_KEYCODE = KeyCode.E;  
+ë¶€ë¶„ìœ¼ë¡œ ì„¤ì • ìˆ˜ì • ê°€ëŠ¥
 
 
 # GuestModeFree - Lilly
 
-°Ô½ºÆ®¸ğµåÀÇ ÇÃ·¹ÀÌ ¹öÆ° ¸ğµÎ È°¼ºÈ­  
+ê²ŒìŠ¤íŠ¸ëª¨ë“œì˜ í”Œë ˆì´ ë²„íŠ¼ ëª¨ë‘ í™œì„±í™”  
 
 
 # keyChange
 
 https://youtu.be/twhuHH77T7s  
-´ë»ç ÁøÇàÃ¢¿¡¼­ ¾ØÅÍ¸¦ ´­·¯¾ß¸¸ ÁøÇàµÇ´Âµ¥  
-½ºÆäÀÌ½º·Îµµ ÁøÇàÇÒ¼ö ÀÖ°ÔµÊ.  
-½ºÅ©¸³Æ® ¼öÁ¤ÇØ¼­ ´Ù¸¥Å°·Î º¯°æ ¹× Ãß°¡ °¡´É  
+ëŒ€ì‚¬ ì§„í–‰ì°½ì—ì„œ ì•¤í„°ë¥¼ ëˆŒëŸ¬ì•¼ë§Œ ì§„í–‰ë˜ëŠ”ë°  
+ìŠ¤í˜ì´ìŠ¤ë¡œë„ ì§„í–‰í• ìˆ˜ ìˆê²Œë¨.  
+ìŠ¤í¬ë¦½íŠ¸ ìˆ˜ì •í•´ì„œ ë‹¤ë¥¸í‚¤ë¡œ ë³€ê²½ ë° ì¶”ê°€ ê°€ëŠ¥  
 return Input.GetKeyDown(keyCode) || Input.GetKeyDown(KeyCode.Space);  
 
 
 # MemoriesModeUnlock - Lilly
 
-È¸»ó¸ğµåÀÇ ÀÏ»ó,VIP ¸Ş´º È°¼ºÈ­  
+íšŒìƒëª¨ë“œì˜ ì¼ìƒ,VIP ë©”ë‰´ í™œì„±í™”  
 
 
 # MotionWindowAddMyPose - Lilly
 
-½ºÆ©µğ¿À¸ğµå¿¡¼­ Æ÷Áî ÀúÀå½Ã Æ÷Áî ¸ñ·Ï ÀÚµ¿ °»½Å  
+ìŠ¤íŠœë””ì˜¤ëª¨ë“œì—ì„œ í¬ì¦ˆ ì €ì¥ì‹œ í¬ì¦ˆ ëª©ë¡ ìë™ ê°±ì‹   
 
 
 # nameExtender - CMI
@@ -91,25 +93,25 @@ return Input.GetKeyDown(keyCode) || Input.GetKeyDown(KeyCode.Space);
 
 # NoMessageBox - Lilly
 
-¸Ş½ÃÁöÃ¢À» ¾È¶ß°ÔÇÏ°í ´ë½Å LogError·Î ÂïÈû  
+ë©”ì‹œì§€ì°½ì„ ì•ˆëœ¨ê²Œí•˜ê³  ëŒ€ì‹  LogErrorë¡œ ì°í˜  
 
 
 # PrivateEventListEnable - Lilly
 
-ÇÁ¶óÀÌºø¸ğµå¿¡¼­ ¸ğµç ¸Ş´º È°¼ºÈ­  
-all_maids_in_private_mode¿Í °°À¸´Ï µÑÁß ÇÏ³ª¸¸ ¾²±â  
+í”„ë¼ì´ë¹—ëª¨ë“œì—ì„œ ëª¨ë“  ë©”ë‰´ í™œì„±í™”  
+all_maids_in_private_modeì™€ ê°™ìœ¼ë‹ˆ ë‘˜ì¤‘ í•˜ë‚˜ë§Œ ì“°ê¸°  
 
 
 # report_dupes - CMI
 
-Áßº¹ÆÄÀÏ¸ñ·ÏÀ» menu_dupes.log·Î Ãâ·Â  
+ì¤‘ë³µíŒŒì¼ëª©ë¡ì„ menu_dupes.logë¡œ ì¶œë ¥  
 
 
 # saveSettingsInGame - CMI
 
-saveSettingsInGame ÇÃ·¯±×ÀÎÀÇ ½ºÅ©¸³Æ® ¹öÀü  
+saveSettingsInGame í”ŒëŸ¬ê·¸ì¸ì˜ ìŠ¤í¬ë¦½íŠ¸ ë²„ì „  
 
 
 # skipStartLogo - CMI
 
-fastFadeÇÃ·¯±×ÀÎÀÇ ½ºÅ©¸³Æ® ¹öÀü ½ºÅ¸Æ®·Î°í¸¸ ½ºµhµÊ  
+fastFadeí”ŒëŸ¬ê·¸ì¸ì˜ ìŠ¤í¬ë¦½íŠ¸ ë²„ì „ ìŠ¤íƒ€íŠ¸ë¡œê³ ë§Œ ìŠ¤hë¨  
