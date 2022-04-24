@@ -53,7 +53,7 @@ COM3D2\BepinEx\LogOutput.log  파일을 공유할것
 # fastFade - CMI  
 
 fastFade플러그인의 스크립트 버전  
-기존 플러그인과 다르게 날자 전환은 스h 안함  
+기존 플러그인과 다르게 날자 전환은 스킾 안함  
 
 
 # ForceScheduleEvents - discode
@@ -114,4 +114,12 @@ saveSettingsInGame 플러그인의 스크립트 버전
 
 # skipStartLogo - CMI
 
-fastFade플러그인의 스크립트 버전 스타트로고만 스h됨  
+fastFade플러그인의 스크립트 버전 스타트로고만 스킾됨  
+
+
+# unlock_all_skills - CMI
+
+스킬 강제로 배우기  
+메이드 관리에서 아래키 누르면 실행됨  
+static readonly KeyCode UNLOCK_KEYCODE = KeyCode.U;  
+static readonly KeyCode RESET_KEYCODE = KeyCode.R;  
