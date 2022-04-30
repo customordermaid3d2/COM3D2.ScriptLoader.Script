@@ -2,6 +2,7 @@
 // #name Force Schedule Events
 // #desc Removes checks for Schedules Yotogi Events.
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using HarmonyLib;
 using Schedule;
 using System.Collections.Generic;
@@ -9,13 +10,29 @@ using MaidStatus;
 
 public class ForceScheduleEvents
 {
+    #region config
+    // Plugin starts with H-Event enabled true/false (default: false)
+    static readonly bool startsUnlocked = false;
+
+    // Key to use to toggle between lock/unlock
+    // Refer to Unity docs for available keys:
+    // https://docs.unity3d.com/ScriptReference/KeyCode.html
+    static readonly KeyCode TOGGLE_KEYCODE = KeyCode.E;
+    #endregion config
+
+    internal static bool canToggle = false;
     public static GameObject gameObject;
-    public static bool isUnlock = false;
 
     public static void Main()
     {
         gameObject = new GameObject();
         gameObject.AddComponent<MB>();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    public static void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
+    {
+        canToggle = scene.buildIndex == 3 || scene.buildIndex == 1;
     }
 
     public static void Unload()
@@ -27,7 +44,7 @@ public class ForceScheduleEvents
     class MB : MonoBehaviour
     {
         Harmony instance;
-        static bool isUnlock = false;
+        static bool isUnlock = startsUnlocked;
 
         void Awake()
         {
@@ -37,7 +54,7 @@ public class ForceScheduleEvents
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(TOGGLE_KEYCODE) && canToggle)
             {
                 Toggle();
             }
@@ -52,7 +69,7 @@ public class ForceScheduleEvents
         {
             isUnlock = !isUnlock;
             string message = isUnlock ? "Schedule Events are Unlocked" : "Schedule Events are Locked";
-            Debug.Log(message);
+            Debug.LogWarning(message);
         }
 
         // Simply remove most of the checks needed to enable an event.
@@ -99,7 +116,6 @@ public class ForceScheduleEvents
         {
             if (isUnlock)
             {
-
                 List<Maid> list = new List<Maid>();
 
                 for (int i = 0; i < GameMain.Instance.CharacterMgr.GetStockMaidCount(); i++)
@@ -134,6 +150,20 @@ public class ForceScheduleEvents
                 return false;
             }
             return true;
+        }
+
+        // Enable H-Events in memory Mode
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(FreeModeItemVip), nameof(FreeModeItemVip.CreateItemVipList))]
+        public static void CreateItemVipListPostfix(ref List<FreeModeItemVip> __result)
+        {
+            if (isUnlock)
+            {
+                foreach (FreeModeItemVip item in __result)
+                {
+                    item.is_enabled_ = true;
+                }
+            }
         }
     }
 }

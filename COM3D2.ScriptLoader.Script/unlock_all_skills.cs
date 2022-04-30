@@ -1,8 +1,8 @@
 ﻿// #author PainBrioché
 // #name UnlockAllSkills
 // #desc Unlock or Reset all valid Yotogi Skills for a maid.
-// Press Control+Shift+U while in Maid Admin with the desired Maid selected to Unlock all valid Yotogi Skills
-// Press Control+Shift+R while in Maid Admin with the desired Maid selected to Reset Yotogi Skills to their natural state.
+// Press U while in Maid Admin with the desired Maid selected to Unlock all valid Yotogi Skills
+// Press R while in Maid Admin with the desired Maid selected to Reset Yotogi Skills to their natural state.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,24 +13,31 @@ using Yotogis;
 
 public class UnlockAllSkills3
 {
+    #region config
+    // Key to use to toggle between lock/unlock
+    // Refer to Unity docs for available keys:
+    // https://docs.unity3d.com/ScriptReference/KeyCode.html
+    static readonly KeyCode UNLOCK_KEYCODE = KeyCode.U;
+    static readonly KeyCode RESET_KEYCODE = KeyCode.R;
+    #endregion config
+
+
+
     public static bool isMaidManagement = false;
     public static bool isUnlockGlobal;
     public static GameObject gameObject;
 
     public static void Main()
     {
-        if (gameObject==null)
-        {
-            gameObject = new GameObject();
-            gameObject.AddComponent<MB>();
-        }        
+        gameObject = new GameObject();
+        gameObject.AddComponent<MB>();
+
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public static void Unload()
     {
-        if (gameObject != null)
-            GameObject.Destroy(gameObject);
+        GameObject.Destroy(gameObject);
         gameObject = null;
     }
 
@@ -59,16 +66,13 @@ public class UnlockAllSkills3
         {
             if (isMaidManagement)
             {
-                if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKeyDown(UNLOCK_KEYCODE))
                 {
-                    if (Input.GetKeyDown(KeyCode.U))
-                    {
-                        ChoiceConfirmationWarning(true);
-                    }
-                    if (Input.GetKeyDown(KeyCode.R))
-                    {
-                        ChoiceConfirmationWarning(false);
-                    }
+                    ChoiceConfirmationWarning(true);
+                }
+                if (Input.GetKeyDown(RESET_KEYCODE))
+                {
+                    ChoiceConfirmationWarning(false);
                 }
             }
         }
@@ -100,7 +104,12 @@ public class UnlockAllSkills3
             Debug.Log($"■■■■■ Skill list cleared, begining skill attribution. ■■■■■");
 
             isUnlockGlobal = isUnlock;
-            List<Skill.Data> learnPossibleSkills = Skill.GetLearnPossibleSkills(maid.status);
+            List<Skill.Data> learnPossibleSkills = Skill.GetLearnPossibleSkills(maid.status);            
+            
+            // Increase her yotogiCount by 1, so Yotogi is unlocked in memory mode.
+            if (isUnlock && maid.status.playCountYotogi == 0) { maid.status.playCountYotogi += 1; }
+
+
             isUnlockGlobal = false;
 
             foreach (Skill.Data skill in learnPossibleSkills)
@@ -112,6 +121,7 @@ public class UnlockAllSkills3
             string logEndMessage = isUnlock ? $"■■■■■ {maid.status.callName}'s skills have been Unlocked! ■■■■■" : $"■■■■■ {maid.status.callName}'s skills have been reset to their natural state! ■■■■■";
             Debug.Log(logEndMessage);
         }
+
 
         #region UnlockSkills Section
         // Checks for all valid Yotogi Classes rather than only already acquires ones.

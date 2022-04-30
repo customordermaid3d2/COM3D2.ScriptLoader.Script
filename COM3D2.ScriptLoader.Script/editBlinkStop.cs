@@ -70,8 +70,8 @@ public static class EditBlinkStop2
 		var checkpoint = new CodeMatcher(instrs)
 			.MatchForward(true,
 				new CodeMatch(OpCodes.Ldarg_0),
-				new CodeMatch(OpCodes.Ldfld, AccessTools.Field(typeof(Maid), "boMabataki")),
-				new CodeMatch(OpCodes.Brfalse)
+				new CodeMatch(OpCodes.Ldfld, AccessTools.Field(typeof(Maid), "MabatakiUpdateStop")),
+				new CodeMatch(OpCodes.Brtrue)
 			);
 
 		//Snag the instruction of brfalse so we can reuse it's operand (aka where to jump if AllowBlinking turns out to be false).
