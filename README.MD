@@ -112,6 +112,12 @@ all_maids_in_private_mode와 같으니 둘중 하나만 쓰기
 saveSettingsInGame 플러그인의 스크립트 버전  
 
 
+# SceneFreeModeSelectManagerYotogi - Lilly
+
+밤시중 횟수가 0인경우 회상 밤시중 사용불가.  
+횟수 무시하고 사용 가능하게 설정  
+
+
 # skipStartLogo - CMI
 
 fastFade플러그인의 스크립트 버전 스타트로고만 스킾됨  
