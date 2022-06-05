@@ -1,11 +1,16 @@
 # How to use
 
+
+![2022-06-05 19 33 59](https://user-images.githubusercontent.com/20321215/172046494-9542907b-a6bb-4bcc-a987-73bdc1dce293.png)
+![2022-06-05 19 35 05](https://user-images.githubusercontent.com/20321215/172046498-6cbdc20d-e8cc-4f27-b022-e59fc04b138e.png)
+
+
 need ScriptLoader.dll https://github.com/ghorsington/BepInEx.ScriptLoader  
 Put *.cs file of this project in COM3D2\scripts form https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script  
   
 ScriptLoader.dll 필요 https://github.com/ghorsington/BepInEx.ScriptLoader  
 https://github.com/customordermaid3d2/COM3D2.ScriptLoader.Script/tree/master/COM3D2.ScriptLoader.Script 에서 *.cs 파일을 COM3D2\scripts 에 넣기  
-내가 개발한것 외에 CMI나 디스코드의 파일도 포함됨
+내가 개발한것 외에 CMI나 디스코드의 파일도 포함됨  
 
 
 # add_subs_to_old_yotogi - CMI  
