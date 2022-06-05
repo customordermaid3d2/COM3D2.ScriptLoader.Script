@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace COM3D2.ScriptLoader.Script
 {
@@ -14,7 +15,7 @@ namespace COM3D2.ScriptLoader.Script
 
         public static void Main()
         {
-            instance = Harmony.CreateAndPatchAll(typeof(CharacterSelectManagerSort));
+            instance = Harmony.CreateAndPatchAll(typeof(CreateHoneymoonModeCharaList));
         }
 
         public static void Unload()
@@ -23,17 +24,18 @@ namespace COM3D2.ScriptLoader.Script
             instance = null;
         }
 
-        [HarmonyPatch(typeof(SceneCharacterSelect), "CreateHoneymoonModeCharaList",MethodType.StaticConstructor)]
+        [HarmonyPatch(typeof(SceneCharacterSelect), "CreateHoneymoonModeCharaList")]
         [HarmonyPrefix]
         // public static List<string> CreateHoneymoonModeCharaList()
-        public static bool SortMaidStandard1(ref List<string> __result)
+        public static bool CreateHoneymoonModeCharaListPre(ref List<string> __result)
         {
+            Debug.LogWarning($"CreateHoneymoonModeCharaList : {SceneCharacterSelect.chara_guid_stock_list.Count}");
             SceneCharacterSelect.chara_guid_stock_list.Clear();
             List<Maid> list = new List<Maid>();
             CharacterSelectManager.DefaultMaidList(list);
             foreach (Maid maid in list)
             {
-                if (!maid.boNPC 
+                if (!maid.boNPC
                     //&& (maid.status.seikeiken == Seikeiken.Yes_No || maid.status.seikeiken == Seikeiken.Yes_Yes) 
                     //&& maid.status.relation >= Relation.Lover 
                     //&& maid.status.contract != Contract.Trainee 
@@ -42,7 +44,8 @@ namespace COM3D2.ScriptLoader.Script
                     SceneCharacterSelect.chara_guid_stock_list.Add(maid.status.guid);
                 }
             }
-            __result= new List<string>(SceneCharacterSelect.chara_guid_stock_list);
+            __result = new List<string>(SceneCharacterSelect.chara_guid_stock_list);
+            Debug.LogWarning($"CreateHoneymoonModeCharaList : {__result.Count}");
             return false;
         }
 
