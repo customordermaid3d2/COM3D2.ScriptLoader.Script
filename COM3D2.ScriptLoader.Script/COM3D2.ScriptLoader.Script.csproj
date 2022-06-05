@@ -39,11 +39,11 @@
     <Reference Include="0Harmony, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HarmonyX.2.7.0\lib\net35\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>H:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\COM3D2.GameLibs.2.17.0-r.0\lib\net35\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>H:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\COM3D2.GameLibs.2.17.0-r.0\lib\net35\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx, Version=5.4.19.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BepInEx.BaseLib.5.4.19\lib\net35\BepInEx.dll</HintPath>
@@ -78,12 +78,16 @@
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UnityEngine.5.6.1\lib\net35\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\COM3D2.GameLibs.2.17.0-r.0\lib\net35\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="add_subs_to_old_yotogi.cs" />
     <Compile Include="all_maids_in_private_mode.cs" />
     <Compile Include="CharacterEditSortRedux.cs" />
     <Compile Include="CharacterSelectManagerSort.cs" />
+    <Compile Include="CreateHoneymoonModeCharaList.cs" />
     <Compile Include="dump_game_info.cs" />
     <Compile Include="editable_names.cs" />
     <Compile Include="editBlinkStop.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="keyChange.cs" />
     <Compile Include="load_small_thumbs.cs" />
     <Compile Include="MemoriesModeUnlock.cs" />
+    <Compile Include="MoreRandomNames.cs" />
     <Compile Include="MotionWindowAddMyPose.cs" />
     <Compile Include="nameExtender.cs" />
     <Compile Include="NoMessageBox.cs" />

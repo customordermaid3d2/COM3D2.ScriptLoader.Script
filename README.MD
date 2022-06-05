@@ -102,6 +102,11 @@ return Input.GetKeyDown(keyCode) || Input.GetKeyDown(KeyCode.Space);
 all_maids_in_private_mode와 같으니 둘중 하나만 쓰기  
 
 
+# MoreRandomNames - 디스코드
+
+메이드 이름 랜덤 선택시 목록을 변경/추가한거  
+
+
 # report_dupes - CMI
 
 중복파일목록을 menu_dupes.log로 출력  
