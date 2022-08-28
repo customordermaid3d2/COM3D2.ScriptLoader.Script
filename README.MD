@@ -133,6 +133,11 @@ saveSettingsInGame 플러그인의 스크립트 버전
 fastFade플러그인의 스크립트 버전 스타트로고만 스킾됨  
 
 
+# TaskUnitIsEnabled - Lilly
+
+스케줄 버튼 비활성을 활성으로 변경
+
+
 # unlock_all_skills - CMI
 
 스킬 강제로 배우기  
