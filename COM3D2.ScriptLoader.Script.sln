@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COM3D2.ScriptLoader.Script"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C04EBB9-7E16-41A5-91FC-ACD6B95A5BE5}"
 	ProjectSection(SolutionItems) = preProject
+		memo.txt = memo.txt
 		README.MD = README.MD
 	EndProjectSection
 EndProject

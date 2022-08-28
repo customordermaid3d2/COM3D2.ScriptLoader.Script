@@ -87,6 +87,7 @@
     <Compile Include="all_maids_in_private_mode.cs" />
     <Compile Include="CharacterEditSortRedux.cs" />
     <Compile Include="CharacterSelectManagerSort.cs" />
+    <Compile Include="TaskUnitIsEnabled.cs" />
     <Compile Include="CreateHoneymoonModeCharaList.cs" />
     <Compile Include="dump_game_info.cs" />
     <Compile Include="editable_names.cs" />
