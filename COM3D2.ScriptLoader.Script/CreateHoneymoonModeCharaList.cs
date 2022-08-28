@@ -15,6 +15,7 @@ namespace COM3D2.ScriptLoader.Script
 
         public static void Main()
         {
+            if(instance == null)
             instance = Harmony.CreateAndPatchAll(typeof(CreateHoneymoonModeCharaList));
         }
 

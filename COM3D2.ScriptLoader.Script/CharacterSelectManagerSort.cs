@@ -15,6 +15,7 @@ using MaidStatus;
 
         public static void Main()
         {
+        if (instance == null)
             instance = Harmony.CreateAndPatchAll(typeof(CharacterSelectManagerSort));
         }
 

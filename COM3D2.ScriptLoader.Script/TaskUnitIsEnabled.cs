@@ -15,7 +15,8 @@ namespace COM3D2.ScriptLoader.Script
 
         public static void Main()
         {
-            instance = Harmony.CreateAndPatchAll(typeof(TaskUnitIsEnabled));
+            if (instance == null)
+                instance = Harmony.CreateAndPatchAll(typeof(TaskUnitIsEnabled));
         }
 
         public static void Unload()
@@ -26,7 +27,6 @@ namespace COM3D2.ScriptLoader.Script
 
         [HarmonyPatch(typeof(TaskUnit), "isEnabled", MethodType.Setter)]
         [HarmonyPrefix]
-        // public static List<string> CreateHoneymoonModeCharaList()
         public static void isEnabledPre(ref bool __0)
         {
             __0 = true;
